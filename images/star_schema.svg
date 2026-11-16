@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900" width="1500" height="900" role="img" aria-label="Star schema for the bike share data warehouse" xmlns:c2pa="http://c2pa.org/manifest">
+<title>Bike Share Star Schema</title>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#111C33"/></linearGradient>
+ <filter id="sh" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<style>
+ text{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+ .title{font-size:28px;font-weight:700;fill:#F8FAFC}
+ .sub{font-size:14px;fill:#94A3B8}
+ .th{font-size:18px;font-weight:700;fill:#fff}
+ .col{font-size:15px;fill:#E2E8F0}
+ .pk{font-size:11px;font-weight:700;fill:#FBBF24}
+ .fk{font-size:11px;font-weight:700;fill:#60A5FA}
+ .calc{font-size:11px;font-weight:700;fill:#34D399}
+ .card{font-size:12px;font-weight:700;fill:#F8FAFC}
+ .lbl{font-size:12px;fill:#94A3B8;font-style:italic}
+ .rel{fill:none;stroke:#64748B;stroke-width:2.2;stroke-dasharray:7 7;animation:flow 1.4s linear infinite}
+ @keyframes flow{to{stroke-dashoffset:-14}}
+ .tbl{animation:pop .7s ease-out both}
+ @keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+ .calcrow{animation:glow 2.4s ease-in-out infinite}
+ @keyframes glow{0%,100%{fill-opacity:.14}50%{fill-opacity:.32}}
+ @media (prefers-reduced-motion:reduce){.rel,.tbl,.calcrow{animation:none}}
+</style>
+<rect width="100%" height="100%" rx="18" fill="url(#bg)"/>
+<text x="750.0" y="48" text-anchor="middle" class="title">Bike Share Star Schema</text>
+<text x="750.0" y="72" text-anchor="middle" class="sub">2 fact tables · 3 dimensions · Azure Synapse Dedicated SQL Pool</text>
+<path class="rel" d="M330,145 H470 V175 H610"/>
+<path class="rel" d="M190,400 V560"/>
+<path class="rel" d="M1170,140 H1030 V295 H890"/>
+<path class="rel" d="M1170,168 H1050 V325 H890"/>
+<path class="rel" d="M680,520 V450 H540 V235 H610"/>
+<path class="rel" d="M720,520 V430 H520 V265 H610"/>
+<path class="rel" d="M610,620 H470 V705 H330"/>
+<path class="rel" d="M610,570 H400 V325 H330"/>
+<path class="rel" d="M610,595 H420 V355 H330"/>
+<g><circle cx="346" cy="145" r="9" fill="#0B1220" stroke="#64748B"/><text x="346" y="149" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="594" cy="175" r="9" fill="#0B1220" stroke="#64748B"/><text x="594" y="179" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="190" cy="418" r="9" fill="#0B1220" stroke="#64748B"/><text x="190" y="422" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="190" cy="542" r="9" fill="#0B1220" stroke="#64748B"/><text x="190" y="546" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="1154" cy="140" r="9" fill="#0B1220" stroke="#64748B"/><text x="1154" y="144" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="906" cy="295" r="9" fill="#0B1220" stroke="#64748B"/><text x="906" y="299" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="1154" cy="168" r="9" fill="#0B1220" stroke="#64748B"/><text x="1154" y="172" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="906" cy="325" r="9" fill="#0B1220" stroke="#64748B"/><text x="906" y="329" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="680" cy="504" r="9" fill="#0B1220" stroke="#64748B"/><text x="680" y="508" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="594" cy="235" r="9" fill="#0B1220" stroke="#64748B"/><text x="594" y="239" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="720" cy="504" r="9" fill="#0B1220" stroke="#64748B"/><text x="720" y="508" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="594" cy="265" r="9" fill="#0B1220" stroke="#64748B"/><text x="594" y="269" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="594" cy="620" r="9" fill="#0B1220" stroke="#64748B"/><text x="594" y="624" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="346" cy="705" r="9" fill="#0B1220" stroke="#64748B"/><text x="346" y="709" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="594" cy="570" r="9" fill="#0B1220" stroke="#64748B"/><text x="594" y="574" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="346" cy="325" r="9" fill="#0B1220" stroke="#64748B"/><text x="346" y="329" text-anchor="middle" class="card">N</text></g>
+<g><circle cx="594" cy="595" r="9" fill="#0B1220" stroke="#64748B"/><text x="594" y="599" text-anchor="middle" class="card">1</text></g>
+<g><circle cx="346" cy="355" r="9" fill="#0B1220" stroke="#64748B"/><text x="346" y="359" text-anchor="middle" class="card">N</text></g>
+<text x="432" y="508" class="lbl">account start / end</text>
+<text x="432" y="525" class="lbl">(role-playing date)</text>
+<text x="1064" y="360" class="lbl">start / end station</text>
+<text x="1064" y="377" class="lbl">(role-playing station)</text>
+<g class="tbl" style="animation-delay:0.00s" filter="url(#sh)">
+<rect x="50" y="90" width="280" height="310" rx="12" fill="#162036" stroke="#2563EB" stroke-width="2"/>
+<path d="M50,102 a12,12 0 0 1 12,-12 h256 a12,12 0 0 1 12,12 V130 H50 Z" fill="#2563EB"/>
+<text x="190.0" y="116" text-anchor="middle" class="th">dim_rider</text>
+<text x="66" y="150" class="col">rider_id</text>
+<text x="316" y="149" text-anchor="end" class="pk">PK</text>
+<rect x="52" y="160" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="66" y="180" class="col">first_name</text>
+<text x="66" y="210" class="col">last_name</text>
+<rect x="52" y="220" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="66" y="240" class="col">birthdate</text>
+<text x="66" y="270" class="col">address</text>
+<rect x="52" y="280" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="66" y="300" class="col">is_member</text>
+<text x="66" y="330" class="col">account_start_date_key</text>
+<text x="316" y="329" text-anchor="end" class="fk">FK</text>
+<rect x="52" y="340" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="66" y="360" class="col">account_end_date_key</text>
+<text x="316" y="359" text-anchor="end" class="fk">FK</text>
+<rect class="calcrow" x="52" y="370" width="276" height="30" fill="#10B981"/>
+<text x="66" y="390" class="col">rider_age</text>
+<text x="316" y="389" text-anchor="end" class="calc">CALC</text>
+</g>
+<g class="tbl" style="animation-delay:0.15s" filter="url(#sh)">
+<rect x="610" y="90" width="280" height="280" rx="12" fill="#162036" stroke="#F97316" stroke-width="2"/>
+<path d="M610,102 a12,12 0 0 1 12,-12 h256 a12,12 0 0 1 12,12 V130 H610 Z" fill="#F97316"/>
+<text x="750.0" y="116" text-anchor="middle" class="th">fact_trip</text>
+<text x="626" y="150" class="col">trip_id</text>
+<text x="876" y="149" text-anchor="end" class="pk">PK</text>
+<rect x="612" y="160" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="626" y="180" class="col">rider_id</text>
+<text x="876" y="179" text-anchor="end" class="fk">FK</text>
+<text x="626" y="210" class="col">ride_type</text>
+<rect x="612" y="220" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="626" y="240" class="col">started_at_key</text>
+<text x="876" y="239" text-anchor="end" class="fk">FK</text>
+<text x="626" y="270" class="col">ended_at_key</text>
+<text x="876" y="269" text-anchor="end" class="fk">FK</text>
+<rect x="612" y="280" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="626" y="300" class="col">start_station_id</text>
+<text x="876" y="299" text-anchor="end" class="fk">FK</text>
+<text x="626" y="330" class="col">end_station_id</text>
+<text x="876" y="329" text-anchor="end" class="fk">FK</text>
+<rect class="calcrow" x="612" y="340" width="276" height="30" fill="#10B981"/>
+<text x="626" y="360" class="col">duration</text>
+<text x="876" y="359" text-anchor="end" class="calc">CALC</text>
+</g>
+<g class="tbl" style="animation-delay:0.30s" filter="url(#sh)">
+<rect x="1170" y="90" width="280" height="160" rx="12" fill="#162036" stroke="#2563EB" stroke-width="2"/>
+<path d="M1170,102 a12,12 0 0 1 12,-12 h256 a12,12 0 0 1 12,12 V130 H1170 Z" fill="#2563EB"/>
+<text x="1310.0" y="116" text-anchor="middle" class="th">dim_station</text>
+<text x="1186" y="150" class="col">station_id</text>
+<text x="1436" y="149" text-anchor="end" class="pk">PK</text>
+<rect x="1172" y="160" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="1186" y="180" class="col">station_name</text>
+<text x="1186" y="210" class="col">latitude</text>
+<rect x="1172" y="220" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="1186" y="240" class="col">longitude</text>
+</g>
+<g class="tbl" style="animation-delay:0.45s" filter="url(#sh)">
+<rect x="50" y="560" width="280" height="160" rx="12" fill="#162036" stroke="#F97316" stroke-width="2"/>
+<path d="M50,572 a12,12 0 0 1 12,-12 h256 a12,12 0 0 1 12,12 V600 H50 Z" fill="#F97316"/>
+<text x="190.0" y="586" text-anchor="middle" class="th">fact_payment</text>
+<text x="66" y="620" class="col">payment_id</text>
+<text x="316" y="619" text-anchor="end" class="pk">PK</text>
+<rect x="52" y="630" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="66" y="650" class="col">rider_id</text>
+<text x="316" y="649" text-anchor="end" class="fk">FK</text>
+<text x="66" y="680" class="col">amount</text>
+<rect x="52" y="690" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="66" y="710" class="col">payment_date_key</text>
+<text x="316" y="709" text-anchor="end" class="fk">FK</text>
+</g>
+<g class="tbl" style="animation-delay:0.60s" filter="url(#sh)">
+<rect x="610" y="520" width="280" height="220" rx="12" fill="#162036" stroke="#8B5CF6" stroke-width="2"/>
+<path d="M610,532 a12,12 0 0 1 12,-12 h256 a12,12 0 0 1 12,12 V560 H610 Z" fill="#8B5CF6"/>
+<text x="750.0" y="546" text-anchor="middle" class="th">dim_date</text>
+<text x="626" y="580" class="col">date_key</text>
+<text x="876" y="579" text-anchor="end" class="pk">PK</text>
+<rect x="612" y="590" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="626" y="610" class="col">full_date</text>
+<text x="626" y="640" class="col">day</text>
+<rect x="612" y="650" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="626" y="670" class="col">month</text>
+<text x="626" y="700" class="col">year</text>
+<rect x="612" y="710" width="276" height="30" fill="#FFFFFF" fill-opacity=".03"/>
+<text x="626" y="730" class="col">FirstDayOfMonth</text>
+</g>
+<rect x="50" y="774" width="1400" height="64" rx="12" fill="#162036" stroke="#1E293B"/>
+<rect x="80" y="792" width="22" height="22" rx="5" fill="#F97316"/><text x="112" y="809" class="col">Fact table</text>
+<rect x="270" y="792" width="22" height="22" rx="5" fill="#2563EB"/><text x="302" y="809" class="col">Dimension</text>
+<rect x="460" y="792" width="22" height="22" rx="5" fill="#8B5CF6"/><text x="492" y="809" class="col">Date dimension</text>
+<text x="650" y="809" class="pk">PK</text><text x="678" y="809" class="col">Primary key</text>
+<text x="800" y="809" class="fk">FK</text><text x="828" y="809" class="col">Foreign key</text>
+<rect x="950" y="792" width="22" height="22" rx="5" fill="#10B981" fill-opacity=".4" stroke="#10B981"/><text x="982" y="809" class="col">Calculated column</text>
+<circle cx="1169" cy="803" r="9" fill="#0B1220" stroke="#64748B"/><text x="1169" y="807" text-anchor="middle" class="card">1</text><text x="1188" y="809" class="col">to</text><circle cx="1228" cy="803" r="9" fill="#0B1220" stroke="#64748B"/><text x="1228" y="807" text-anchor="middle" class="card">N</text><text x="1246" y="809" class="col">one-to-many</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjZmQ4ZDFmZi0yYzg4LTQwNzgtYmEyYi0xODQ3MzUzMDJhZWUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaM+fsJ6UbFN+TKvbHESZFGkAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5YTA3YWU2YS05MTEzLTRiM2ItYWEzZC04YTE3NjBkYTViZTFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNopXrwv3z4K5J3tHdG4fby1gAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg5GWqMIh7yJ6fouWUb2vnsZIZhrZJyr/LLFXUwcYWtN6kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKM+Ep9PxhieTXTRnTISIjMAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIJKTdgscJh7oiMPcs3Xw30yHTa9KjphF77cojWkITyVGZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GS3hZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmNmZDhkMWZmLTJjODgtNDA3OC1iYTJiLTE4NDczNTMwMmFlZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjllZGYzMWVmLWU4NTMtNDI2Ny05M2RiLTdhODIxMjkwZDY1N3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDkZaowiHvInp+i5ZRva+exkhmGtknKv8ssVdTBxha03qJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggUk2t8M//0507CNj30rmk7L5d1iapPGFF+eMWyT3z+OiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggjGWZw1fUHCbHoP6rdGUJHOO0215eEYFVHSI4mukwOTl0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFIV7H29yB2AsVgQLxetDn/UogTx7jesa167d10cOTunpiiOAtfskrP6Mn3C+3UF8ACGUY/Ik/OOL5ZLawnJzgA=</c2pa:manifest></metadata></svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 420" width="1400" height="420" role="img" aria-label="Azure data warehouse pipeline in six steps" xmlns:c2pa="http://c2pa.org/manifest">
+<title>Building an Azure Data Warehouse</title>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#111C33"/></linearGradient>
+ <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="130" y1="0" x2="1270" y2="0">
+<stop offset="0.00" stop-color="#3B82F6"/>
+<stop offset="0.20" stop-color="#10B981"/>
+<stop offset="0.40" stop-color="#84CC16"/>
+<stop offset="0.60" stop-color="#06B6D4"/>
+<stop offset="0.80" stop-color="#8B5CF6"/>
+<stop offset="1.00" stop-color="#EC4899"/>
+</linearGradient>
+ <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<style>
+ text{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+ .title{font-size:30px;font-weight:700;fill:#F8FAFC;letter-spacing:.3px}
+ .sub{font-size:14px;fill:#94A3B8}
+ .t1{font-size:17px;font-weight:700;fill:#F8FAFC}
+ .d{font-size:13px;fill:#A9B7CC}
+ .num{font-size:20px;font-weight:800;fill:#0B1220}
+ .flow{stroke-dasharray:8 8;animation:dash 1.2s linear infinite}
+ @keyframes dash{to{stroke-dashoffset:-16}}
+ .ring{opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 6s ease-out infinite}
+ @keyframes ring{0%{opacity:.9;transform:scale(1)}14%{opacity:0;transform:scale(2.1)}100%{opacity:0;transform:scale(2.1)}}
+ .card{animation:card 6s ease-in-out infinite}
+ @keyframes card{0%{stroke-opacity:1;stroke-width:2.5}16%{stroke-opacity:.35;stroke-width:1.5}100%{stroke-opacity:.35;stroke-width:1.5}}
+ .rise{animation:rise .8s ease-out both}
+ @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+ @media (prefers-reduced-motion:reduce){.flow,.ring,.card,.rise{animation:none}}
+</style>
+<rect width="100%" height="100%" rx="18" fill="url(#bg)"/>
+<text x="700.0" y="56" text-anchor="middle" class="title">Building an Azure Data Warehouse</text>
+<text x="700.0" y="80" text-anchor="middle" class="sub">PostgreSQL  →  Data Lake Gen2  →  Synapse Analytics  →  Star Schema</text>
+<line x1="130.0" y1="120" x2="1270.0" y2="120" stroke="#1E293B" stroke-width="6" stroke-linecap="round"/>
+<line class="flow" x1="130.0" y1="120" x2="1270.0" y2="120" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+<g class="rise" style="animation-delay:0.00s">
+<rect class="card" style="animation-delay:0.0s" x="30.0" y="165" width="200" height="192" rx="16" fill="#162036" stroke="#3B82F6"/>
+<rect x="48.0" y="165" width="164" height="4" rx="2" fill="#3B82F6"/>
+<circle class="ring" style="animation-delay:0.0s" cx="130.0" cy="120" r="26" fill="none" stroke="#3B82F6" stroke-width="3"/>
+<circle cx="130.0" cy="120" r="26" fill="#3B82F6" filter="url(#glow)"/>
+<text x="130.0" y="127" text-anchor="middle" class="num">01</text>
+<text x="130.0" y="216" text-anchor="middle" class="t1">Create Azure</text>
+<text x="130.0" y="238" text-anchor="middle" class="t1" fill="#3B82F6" style="fill:#3B82F6">Resources</text>
+<line x1="100.0" y1="256" x2="160.0" y2="256" stroke="#3B82F6" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+<text x="130.0" y="288" text-anchor="middle" class="d">Provision PostgreSQL and</text>
+<text x="130.0" y="310" text-anchor="middle" class="d">an Azure Synapse</text>
+<text x="130.0" y="332" text-anchor="middle" class="d">workspace</text>
+</g>
+<g class="rise" style="animation-delay:0.15s">
+<rect class="card" style="animation-delay:1.0s" x="258.0" y="165" width="200" height="192" rx="16" fill="#162036" stroke="#10B981"/>
+<rect x="276.0" y="165" width="164" height="4" rx="2" fill="#10B981"/>
+<circle class="ring" style="animation-delay:1.0s" cx="358.0" cy="120" r="26" fill="none" stroke="#10B981" stroke-width="3"/>
+<circle cx="358.0" cy="120" r="26" fill="#10B981" filter="url(#glow)"/>
+<text x="358.0" y="127" text-anchor="middle" class="num">02</text>
+<text x="358.0" y="216" text-anchor="middle" class="t1">Design Star</text>
+<text x="358.0" y="238" text-anchor="middle" class="t1" fill="#10B981" style="fill:#10B981">Schema</text>
+<line x1="328.0" y1="256" x2="388.0" y2="256" stroke="#10B981" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+<text x="358.0" y="288" text-anchor="middle" class="d">Model fact and dimension</text>
+<text x="358.0" y="310" text-anchor="middle" class="d">tables around the</text>
+<text x="358.0" y="332" text-anchor="middle" class="d">business questions</text>
+</g>
+<g class="rise" style="animation-delay:0.30s">
+<rect class="card" style="animation-delay:2.0s" x="486.0" y="165" width="200" height="192" rx="16" fill="#162036" stroke="#84CC16"/>
+<rect x="504.0" y="165" width="164" height="4" rx="2" fill="#84CC16"/>
+<circle class="ring" style="animation-delay:2.0s" cx="586.0" cy="120" r="26" fill="none" stroke="#84CC16" stroke-width="3"/>
+<circle cx="586.0" cy="120" r="26" fill="#84CC16" filter="url(#glow)"/>
+<text x="586.0" y="127" text-anchor="middle" class="num">03</text>
+<text x="586.0" y="216" text-anchor="middle" class="t1">Load Data into</text>
+<text x="586.0" y="238" text-anchor="middle" class="t1" fill="#84CC16" style="fill:#84CC16">PostgreSQL</text>
+<line x1="556.0" y1="256" x2="616.0" y2="256" stroke="#84CC16" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+<text x="586.0" y="288" text-anchor="middle" class="d">Populate the OLTP source</text>
+<text x="586.0" y="310" text-anchor="middle" class="d">from CSV files with a</text>
+<text x="586.0" y="332" text-anchor="middle" class="d">Python script</text>
+</g>
+<g class="rise" style="animation-delay:0.45s">
+<rect class="card" style="animation-delay:3.0s" x="714.0" y="165" width="200" height="192" rx="16" fill="#162036" stroke="#06B6D4"/>
+<rect x="732.0" y="165" width="164" height="4" rx="2" fill="#06B6D4"/>
+<circle class="ring" style="animation-delay:3.0s" cx="814.0" cy="120" r="26" fill="none" stroke="#06B6D4" stroke-width="3"/>
+<circle cx="814.0" cy="120" r="26" fill="#06B6D4" filter="url(#glow)"/>
+<text x="814.0" y="127" text-anchor="middle" class="num">04</text>
+<text x="814.0" y="216" text-anchor="middle" class="t1">Extract to</text>
+<text x="814.0" y="238" text-anchor="middle" class="t1" fill="#06B6D4" style="fill:#06B6D4">Data Lake</text>
+<line x1="784.0" y1="256" x2="844.0" y2="256" stroke="#06B6D4" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+<text x="814.0" y="288" text-anchor="middle" class="d">Copy tables to ADLS Gen2</text>
+<text x="814.0" y="310" text-anchor="middle" class="d">as CSV with the Synapse</text>
+<text x="814.0" y="332" text-anchor="middle" class="d">Ingest Wizard</text>
+</g>
+<g class="rise" style="animation-delay:0.60s">
+<rect class="card" style="animation-delay:4.0s" x="942.0" y="165" width="200" height="192" rx="16" fill="#162036" stroke="#8B5CF6"/>
+<rect x="960.0" y="165" width="164" height="4" rx="2" fill="#8B5CF6"/>
+<circle class="ring" style="animation-delay:4.0s" cx="1042.0" cy="120" r="26" fill="none" stroke="#8B5CF6" stroke-width="3"/>
+<circle cx="1042.0" cy="120" r="26" fill="#8B5CF6" filter="url(#glow)"/>
+<text x="1042.0" y="127" text-anchor="middle" class="num">05</text>
+<text x="1042.0" y="216" text-anchor="middle" class="t1">Load into</text>
+<text x="1042.0" y="238" text-anchor="middle" class="t1" fill="#8B5CF6" style="fill:#8B5CF6">External Tables</text>
+<line x1="1012.0" y1="256" x2="1072.0" y2="256" stroke="#8B5CF6" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+<text x="1042.0" y="288" text-anchor="middle" class="d">Create staging tables in</text>
+<text x="1042.0" y="310" text-anchor="middle" class="d">the Serverless SQL Pool</text>
+<text x="1042.0" y="332" text-anchor="middle" class="d">over the CSV files</text>
+</g>
+<g class="rise" style="animation-delay:0.75s">
+<rect class="card" style="animation-delay:5.0s" x="1170.0" y="165" width="200" height="192" rx="16" fill="#162036" stroke="#EC4899"/>
+<rect x="1188.0" y="165" width="164" height="4" rx="2" fill="#EC4899"/>
+<circle class="ring" style="animation-delay:5.0s" cx="1270.0" cy="120" r="26" fill="none" stroke="#EC4899" stroke-width="3"/>
+<circle cx="1270.0" cy="120" r="26" fill="#EC4899" filter="url(#glow)"/>
+<text x="1270.0" y="127" text-anchor="middle" class="num">06</text>
+<text x="1270.0" y="216" text-anchor="middle" class="t1">Transform to</text>
+<text x="1270.0" y="238" text-anchor="middle" class="t1" fill="#EC4899" style="fill:#EC4899">Star Schema</text>
+<line x1="1240.0" y1="256" x2="1300.0" y2="256" stroke="#EC4899" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+<text x="1270.0" y="288" text-anchor="middle" class="d">INSERT INTO ... SELECT into</text>
+<text x="1270.0" y="310" text-anchor="middle" class="d">fact and dim tables in the</text>
+<text x="1270.0" y="332" text-anchor="middle" class="d">Dedicated SQL Pool</text>
+</g>
+<circle r="7" fill="#FFFFFF" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" path="M130.0,120 L1270.0,120" keyPoints="0;1;1" keyTimes="0;0.83;1" calcMode="linear"/></circle>
+<text x="700.0" y="402" text-anchor="middle" class="sub">Azure Database for PostgreSQL · ADLS Gen2 · Synapse Serverless &amp; Dedicated SQL Pools</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo0MThmYzEyZi03ZWE3LTQ5N2EtYjc0My02MjAwZmI0OTkzODEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPFglf/D9F/2UbDWa0fbpN8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyNTQzMWUyNi0xYmRiLTQ2OWMtOTdlNC05ZmQ2ZTM4ODNiYTZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoabaX7Vth58FX0XPirLHU0gAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggUIPouDLqnggipqSsAikbyHMZnLDrHAYJltUveCSQEJekZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJQOqd88t4cOtQCXfL7UVGEAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBvin5lO8J2VP80mTnO4kKwWiinM+9IjhNx9Sr7V4ZpTZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSTFZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjQxOGZjMTJmLTdlYTctNDk3YS1iNzQzLTYyMDBmYjQ5OTM4MS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmM0MmVmMWI3LWVkMzQtNDkzMC05MWU4LThjNTI5ZTk1NGIzNXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBQg+i4MuqeCCKmpKwCKRvIcxmcsOscBgmW1S94JJAQl6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggenxePbbgpcvwnVIrgpOTfVxYmprZ2rba65isFnmbv/GiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggfczU/O8mSlFJuXvC0wD8BuTg96q2FcVp2ATnHyM5EaB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHJdlwIw/tFyIBksR/SPi9bMoJq+eRIzVirMxIzp13yuJ5/C0xzFCOkgUmVXjRfmnzENc6IDWPt0itnhXzM7Ggk=</c2pa:manifest></metadata></svg>
