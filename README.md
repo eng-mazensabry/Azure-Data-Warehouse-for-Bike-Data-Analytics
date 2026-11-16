@@ -195,7 +195,7 @@ Includes the calculated `rider_age` column.
 .
 ├── README.md
 ├── images/                      # Diagrams and screenshots
-├── data/                        # Source CSV files
+├── data_source/                 # Source CSV files
 │   ├── trip.csv
 │   ├── payment.csv
 │   ├── station.csv
