@@ -239,4 +239,4 @@ Includes the calculated `rider_age` column.
 ## 👤 Author
 
 **Mazen Sabry**, Data Engineer
-🔗 [LinkedIn](#) · 💻 [GitHub](#)
+🔗 [[LinkedIn](https://www.linkedin.com/in/mazen-sabry-039b3a2b3/)](#) · 💻 [[GitHub](https://github.com/eng-mazensabry)](#)
